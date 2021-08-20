@@ -41,6 +41,7 @@ services:
       - ckan_config:/etc/ckan
       - ckan_home:/usr/lib/ckan
       - ckan_storage:/var/lib/ckan
+      - /Users/pingu/Documents/GitHub/macpingu/ckanext-b2find:/usr/lib/ckan/venv/src/ckanext-b2find
 
   datapusher:
     container_name: datapusher
