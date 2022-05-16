@@ -181,7 +181,10 @@ def _get_search_details():
                 and len(value) and not param.startswith(u'_'):
             if not param.startswith(u'ext_'):
                 fields.append((param, value))
-                fq += u' %s:"%s"' % (param, value)
+                if "bbox" in param:
+                    fq += u' %s:%s' % (param, value)
+                else:
+                    fq += u' %s:"%s"' % (param, value)
                 if param not in fields_grouped:
                     fields_grouped[param] = [value]
                 else:
