@@ -410,4 +410,4 @@ def build_js_translations():
             log.debug(u'JS translation for "{}" is up to date'.format(lang))
         else:
             log.debug(u'Generating JS translation for "{}"'.format(lang))
-            _build_js_translation(lang, po_files, js_entries, dest_file)
+            # _build_js_translation(lang, po_files, js_entries, dest_file)
